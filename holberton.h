@@ -15,3 +15,16 @@
  *we a struct that allows us create commands
  */
 
+typedef struct existing
+{
+  char *command;
+  int (*f)(char **argv);
+}existing_t;
+
+/*function prototypes*/
+{
+  char *read_input ();
+  int simple_addition(int *f);
+  (void) execute ();
+  
+}
