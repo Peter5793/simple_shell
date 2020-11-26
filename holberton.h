@@ -10,21 +10,31 @@
 #include<readline/history.h>
 
 /** 
- *make a function that would initialize shell program
- *write down an algorithm
- *we a struct that allows us create commands
+ *struct in_built - runs in built commands within the shell
+ *@command: input commands
+ *@f: function pointer to execute command
  */
 
-typedef struct existing
+typedef struct in_built
 {
   char *command;
-  int (*f)(char **argv);
-}existing_t;
+  int(*f) (char **args);
+}in_built_t
+  
 
 /*function prototypes*/
+#define LSH_RL_BUFSIZE 1024
+ #define LSH_TOK_BUFSIZE 64
+#define LSH_TOK_DELIM " \t\r\n\a"
+
 {
-  char *read_input ();
-  int simple_addition(int *f);
-  (void) execute ();
+  int lsh_cd(char **args);
+int lsh_help(char **args);
+int lsh_exit(char **args);
+ int lsh_num_builtins();
+ int lsh_launch(char **args);
+ int lsh_execute(char **args);
+ char *lsh_read_line(void);
+ void lsh_loop(void)
   
 }
