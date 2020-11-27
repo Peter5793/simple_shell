@@ -2,7 +2,7 @@
 /**
  * _split_line - parse file into a list of arguments
  *
- * Return: Returns a pointer to the first token found 
+ *Return: Returns a pointer to the first token found
  * in the string
  */
 #define _TOK_BUFSIZE 64
@@ -10,7 +10,7 @@
 char **_split_line(char *line)
 {
 	int bufsize = _TOK_BUFSIZE, position = 0;
-	char **tokens = malloc(bufsize * sizeof(char*));
+	char **tokens = malloc(bufsize * sizeof(char *));
 	char *token;
 
 	if (!tokens)
@@ -26,7 +26,7 @@ char **_split_line(char *line)
 		if (position >= bufsize)
 		{
 			bufsize += _TOK_BUFSIZE;
-			tokens = realloc(tokens, bufsize * sizeof(char*));
+			tokens = realloc(tokens, bufsize * sizeof(char *));
 			if (!tokens)
 			{
 				fprintf(stderr, "sh: allocation error\n");

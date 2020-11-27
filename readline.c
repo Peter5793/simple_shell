@@ -8,12 +8,13 @@ char *_read_line(void)
 	char *line = NULL;
 	ssize_t bufsize = 0;
 	ssize_t res;
-	/* getline to allocate a buffe */	 
+	/* getline to allocate a buffe */
 	res = getline(&line, &bufsize, stdin);
-	if(res == -1)
+	if (res == -1)
 	{
-		if(feof(stdin))
-		{ 	/*Receive an EOF*/
+		if (feof(stdin))
+		{
+		  /*Receive an EOF*/
 			exit(EXIT_SUCCESS);
 			}
 		else
@@ -22,7 +23,5 @@ char *_read_line(void)
 			exit(EXIT_FAILURE);
 		}
 	}
-	
-	
 	return (line);
 }

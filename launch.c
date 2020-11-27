@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
  * _launch - starts the process for the shell program
- *
- * Returns: void
+ *@args: parameter
+ * Return: void
  */
 int _launch(char **args)
 {
@@ -24,14 +24,12 @@ int _launch(char **args)
 		/* Error forking*/
 		perror("sh");
 	}
-	else 
+	else
 	{
 		/**Parent process*/
-		do 
-		{
-			ppid = waitpid(pid,&status,WUNTRACED);
-		}
-		while (WIFEXITED(status) && !WIFSIGNALED(status));
+		do {
+			ppid = waitpid(pid, &status, WUNTRACED);
+		} while (WIFEXITED(status) && !WIFSIGNALED(status));
 	}
 	return (1);
 }
