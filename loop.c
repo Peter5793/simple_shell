@@ -10,14 +10,11 @@ void _loop(void)
 	char **args;
 	int status;
 
-	do
-	{ 
+	do {
 		printf("$ ");
 		line = _read_line();
 		args = _split_line(line);
-
 		free(line);
 		free(args);
-	}
-	while (status);
+	} while (status);
 }
