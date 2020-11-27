@@ -10,25 +10,22 @@
 #define MAXLIST 100 // max number of commands to be supported
 
  
-/**struct in_built - runs in built commands within the shell
- *@command: input commands
- *@f: function pointer to execute command
- */
 
-typedef struct in_built
+/*function prototypes**/
 {
-  char *command;
-  int(*f) (char **args);
-}in_built_t;
-  
+int lsh_cd(char **args);
+int lsh_help(char *);
+int lsh_exit(char *);
 
-/*function prototypes*/
-
-{
-  char *_read_line(void);
-  int _execute(char **args);
-  void _loop(void);
-  char **_split_line(char *line);
-  int _launch(char **args);
+ char *_read_line(void);
+int _execute(char **args);
+void _loop(void);
+char **_split_line(char *line);
+int _launch(char **args);
+int lsh_num_builtins(void);
+int lsh_num_builtins();
+char *builtin_str[];
+int lsh_num_builtins();
+int (*builtin_func[]) (char **);
 }
 #endif
