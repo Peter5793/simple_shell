@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * _execute - launch a builtin or a process
- * @args: arguments to be passed in
+ * @args: arguments to be passed i
  * Return: launched process
  */
 int _execute(char **args)
@@ -14,7 +14,7 @@ int _execute(char **args)
 	}
 	for (i = 0; i < lsh_num_builtins(); i++)
 	{
-		if (strcmp(args[0], builtin_str[i]) == 0)
+		if ((strcmp(args[0], builtin_str[i]) == 0))
 		{
 			return ((*builtin_func[i])(args));
 		}
