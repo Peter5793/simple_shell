@@ -46,10 +46,11 @@ int lsh_cd(char **args)
 }
 /**
  *lsh_help - prints help
+ * @args: argument parameter
  *Return: 1 on success
  */
 
-int lsh_help(char *)
+int lsh_help(char *args)
 {
 	int i;
 
@@ -72,7 +73,7 @@ int lsh_help(char *)
  */
 
 
-int lsh_exit(char *)
+int lsh_exit(char *args)
 {
 	return (0);
 }
